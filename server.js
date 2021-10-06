@@ -13,7 +13,7 @@ const port=process.env.PORT || 3000
 const app=express();
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended:true}))
-mongoose.connect('mongodb://localhost:27017/eduscopeDB');
+/*mongoose.connect('mongodb://localhost:27017/eduscopeDB');*/
 mongoose.connect('mongodb+srv://anuj_saklani:anuj123@cluster0.mn7ci.mongodb.net/eduscopeDB');
 /*mongoose.set('bufferCommands', false);*/
   app.set('view engine', 'ejs');
