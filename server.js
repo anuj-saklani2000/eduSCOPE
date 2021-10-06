@@ -9,6 +9,7 @@ const https=require("https")
 const passportLocalMongoose=require("passport-local-mongoose")
 const findOrCreate = require('mongoose-find-or-create')
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
+ const FacebookStrategy = require('passport-facebook').Strategy;
 const port=process.env.PORT || 3000
 const app=express();
 app.use(express.static("public"))
@@ -74,6 +75,9 @@ passport.use(new GoogleStrategy({
 
 
 
+
+
+
   app.get("/auth/google",
   passport.authenticate('google', { scope: ['profile'] }));
 
@@ -83,6 +87,25 @@ app.get("/auth/google/yes",
     // Successful authentication, redirect home.
     res.redirect('/home');
   });
+
+
+  passport.use(new FacebookStrategy({
+    clientID: process.env.APP_ID,
+    clientSecret: process.env.APP_SECRET,
+    callbackURL: "https://mighty-island-60214.herokuapp.com/auth/facebook/callback",
+    profileFields:['id','displayName','name','email']
+  },
+  function(accessToken, refreshToken, profile, done) {
+    User.findOrCreate({facebookId: profile.id} , function(err, user) {
+      if (err) { return done(err); }
+      done(null, user);
+    });
+  }
+));
+app.get('/auth/facebook', passport.authenticate('facebook', { scope : ['email'] }));
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook', { successRedirect: '/home',
+                                      failureRedirect: '/login' }));
 app.post("/register",function(req,res){
   User.register({username:req.body.username}, req.body.password, function(err, user) {
   if(err){
