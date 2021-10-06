@@ -217,6 +217,9 @@ app.get("/logout",function(req,res){
   req.logout();
   res.redirect("/")
 })
+app.get("/success",function(req,res){
+  res.render("success")
+})
 app.listen(port,function(){
   console.log(`Server is running at ${port} port`)
 })
