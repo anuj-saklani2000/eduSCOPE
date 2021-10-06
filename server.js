@@ -163,7 +163,7 @@ app.get("/about",function(req,res){
 app.get("/contact",function(req,res){
   res.render("contact")
 })
-app.posters("/contact",function(req,res){
+app.post("/contact",function(req,res){
 const a=req.body.names
 const b=req.body.email
 const c=req.body.number
