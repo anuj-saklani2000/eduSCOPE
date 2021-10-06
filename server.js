@@ -92,7 +92,7 @@ app.get("/auth/google/yes",
   passport.use(new FacebookStrategy({
     clientID: process.env.APP_ID,
     clientSecret: process.env.APP_SECRET,
-    callbackURL: "https://mighty-island-60214.herokuapp.com/auth/facebook/callback",
+    callbackURL: "https://mighty-savannah-84244.herokuapp.com/auth/facebook/callback",
     profileFields:['id','displayName','name','email'],
     proxy:true
   },
