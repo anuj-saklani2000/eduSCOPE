@@ -195,35 +195,22 @@ response.on("data",function(data){
 request.write(compress);
 request.end()
 })
+const chatboatSchema=new mongoose.Schema({
+  user_name:String,
+  mail_id:String,
+  message_user:String
+})
+const Chat=mongoose.model("chatboats",chatboatSchema)
 app.post("/chatbot",function(req,res){
   const e=req.body.un
   const f=req.body.mail
   const g=req.body.msg
-  const data={
-          members:[{
-            email_address:f,
-            status:"subscribed",
-            merge_fields:{
-              FNAME:e,
-              LNAME:g
-            }
-          }]
-        }
-        const compress=JSON.stringify(data);
-        const url="https://us5.api.mailchimp.com/3.0/lists/c109893830";
-  const options={
-    method:"POST",
-    auth:"anuj:4fd4cad9278a1a6a8923c39c49d60f27-us5"
-  }
-
-  const request=https.request(url,options,function(response){
-  console.log(response.statusCode);
-  response.on("data",function(data){
-    console.log(JSON.parse(data));
-  })
-  })
-  request.write(compress);
-  request.end()
+const chat=new Chat({
+  user_name:e,
+  mail_id:f,
+  message_user:g
+})
+chat.save();
 })
 app.get("/privacy",function(req,res){
   res.render("privacypolicy")
