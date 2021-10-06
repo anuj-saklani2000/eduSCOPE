@@ -1,0 +1,194 @@
+/* Styling for the Connection Error Page  */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    font-family: 'Baloo 2', cursive;
+
+
+}
+::selection{
+  background:	rgba(221,160,221,0.5);
+}
+.main-container {
+    width: 98%;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 160px;
+}
+
+.main-heading {
+    width: 98%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.heading-error {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+.far {
+    font-size: 2.5rem;
+    color: rgba(123, 104, 238, 0.8);
+    margin-left: 20px;
+    margin-top: 37px;
+}
+
+.main-body {
+    width: 65%;
+    height: 35vh;
+    display: flex;
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    border-radius: 8px;
+    box-shadow: 3px 3px 4px 2px lightgray, -3px -3px 4px 2px lightgray;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+}
+
+.heading-body {
+    font-size: 1.5rem;
+}
+
+.button-cta {
+    width: 48%;
+    height: 40px;
+    font-size: 1.1rem;
+    margin: auto;
+    background: linear-gradient(135deg, rgb(123, 104, 238), rgb(128, 0, 128));
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px lightgray, -3px -3px 4px lightgray;
+    outline: none;
+}
+
+.content {
+    text-align: center;
+}
+
+.body-footer {
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid lightgray;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 625px) {
+    .heading-error {
+        font-size: 2rem;
+    }
+    .far {
+        font-size: 2rem;
+        margin-top: 28px;
+    }
+    .main-body {
+        width: 65%;
+        height: 30vh;
+    }
+    .heading-body {
+        font-size: 1.2rem;
+    }
+    .button-cta {
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    .body-footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .heading-error {
+        font-size: 1.8rem;
+    }
+    .far {
+        font-size: 1.8rem;
+        margin-top: 26px;
+    }
+    .main-body {
+        width: 65%;
+        height: 26vh;
+    }
+    .heading-body {
+        font-size: 1rem;
+    }
+    .button-cta {
+        width: 48%;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+    .body-footer {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .heading-error {
+        font-size: 1.5rem;
+    }
+    .far {
+        font-size: 1.5rem;
+        margin-top: 21px;
+    }
+    .main-body {
+        width: 65%;
+        height: 22vh;
+    }
+    .heading-body {
+        font-size: 0.9rem;
+    }
+    .button-cta {
+        width: 48%;
+        height: 28px;
+        font-size: 0.65rem;
+    }
+    .body-footer {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .heading-error {
+        font-size: 1.2rem;
+    }
+    .far {
+        font-size: 1.2rem;
+        margin-top: 17px;
+    }
+    .main-body {
+        width: 65%;
+        height: 18vh;
+    }
+    .heading-body {
+        font-size: 0.7rem;
+    }
+    .button-cta {
+        width: 48%;
+        height: 20px;
+        font-size: 0.45rem;
+    }
+    .body-footer {
+        font-size: 0.4rem;
+    }
+}
