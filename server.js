@@ -169,7 +169,7 @@ const contactSchema=new mongoose.Schema({
   usernumber:Number,
   messageuser:String
 })
-const Contact=mongoose.model("chatboats",chatboatSchema)
+const Contact=mongoose.model("contactinfos",contactSchema)
 app.post("/contact",function(req,res){
 const a=req.body.names
 const b=req.body.email
