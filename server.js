@@ -5,6 +5,7 @@ const ejs=require("ejs")
 const mongoose=require("mongoose")
 const passport=require("passport")
 const session=require("express-session")
+const request=require("request")
 const https=require("https")
 const passportLocalMongoose=require("passport-local-mongoose")
 const findOrCreate = require('mongoose-find-or-create')
@@ -161,6 +162,68 @@ app.get("/about",function(req,res){
 })
 app.get("/contact",function(req,res){
   res.render("contact")
+})
+app.posters("/contact",function(req,res){
+const a=req.body.names
+const b=req.body.email
+const c=req.body.number
+const d=req.body.message
+const data={
+        members:[{
+          email_address:b,
+          status:"subscribed",
+          merge_fields:{
+            FNAME:a,
+            PHONE:c,
+            LNAME:d
+          }
+        }]
+      }
+      const compress=JSON.stringify(data);
+      const url="https://us5.api.mailchimp.com/3.0/lists/c109893830";
+const options={
+  method:"POST",
+  auth:"anuj:4fd4cad9278a1a6a8923c39c49d60f27-us5"
+}
+
+const request=https.request(url,options,function(response){
+console.log(response.statusCode);
+response.on("data",function(data){
+  console.log(JSON.parse(data));
+})
+})
+request.write(compress);
+request.end()
+})
+app.post("/chatbot",function(req,res){
+  const e=req.body.un
+  const f=req.body.mail
+  const g=req.body.msg
+  const data={
+          members:[{
+            email_address:f,
+            status:"subscribed",
+            merge_fields:{
+              FNAME:e,
+              LNAME:g
+            }
+          }]
+        }
+        const compress=JSON.stringify(data);
+        const url="https://us5.api.mailchimp.com/3.0/lists/c109893830";
+  const options={
+    method:"POST",
+    auth:"anuj:4fd4cad9278a1a6a8923c39c49d60f27-us5"
+  }
+
+  const request=https.request(url,options,function(response){
+  console.log(response.statusCode);
+  response.on("data",function(data){
+    console.log(JSON.parse(data));
+  })
+  })
+  request.write(compress);
+  request.end()
 })
 app.get("/privacy",function(req,res){
   res.render("privacypolicy")
