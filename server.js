@@ -93,7 +93,8 @@ app.get("/auth/google/yes",
     clientID: process.env.APP_ID,
     clientSecret: process.env.APP_SECRET,
     callbackURL: "https://mighty-island-60214.herokuapp.com/auth/facebook/callback",
-    profileFields:['id','displayName','name','email']
+    profileFields:['id','displayName','name','email'],
+    proxy:true
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({facebookId: profile.id} , function(err, user) {
