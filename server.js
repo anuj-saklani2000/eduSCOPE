@@ -163,37 +163,32 @@ app.get("/about",function(req,res){
 app.get("/contact",function(req,res){
   res.render("contact")
 })
+const contactSchema=new mongoose.Schema({
+  username:String,
+  mailid:String,
+  usernumber:Number,
+  messageuser:String
+})
+const Contact=mongoose.model("chatboats",chatboatSchema)
 app.post("/contact",function(req,res){
 const a=req.body.names
 const b=req.body.email
 const c=req.body.number
 const d=req.body.message
-const data={
-        members:[{
-          email_address:b,
-          status:"subscribed",
-          merge_fields:{
-            FNAME:a,
-            PHONE:c,
-            LNAME:d
-          }
-        }]
-      }
-      const compress=JSON.stringify(data);
-      const url="https://us5.api.mailchimp.com/3.0/lists/c109893830";
-const options={
-  method:"POST",
-  auth:"anuj:4fd4cad9278a1a6a8923c39c49d60f27-us5"
-}
-
-const request=https.request(url,options,function(response){
-console.log(response.statusCode);
-response.on("data",function(data){
-  console.log(JSON.parse(data));
+const contact1=new Contact({
+  username:a,
+  mailid:b,
+  usernumber:c,
+  messageuser:d
 })
+contact1.save(function(err){
+  if(err){
+    res.redirect("/error")
+  }
+  else{
+    res.redirect("/success")
+  }
 })
-request.write(compress);
-request.end()
 })
 const chatboatSchema=new mongoose.Schema({
   user_name:String,

@@ -1,0 +1,339 @@
+/* Styling for the Connection Success Page  */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    font-family: 'Baloo 2', cursive;
+}
+
+.main-container {
+    width: 98%;
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.main-heading {
+    width: 98%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.heading-error {
+    font-size: 3rem;
+    display: inline-block;
+}
+
+.fas {
+    font-size: 3rem;
+    color: rgba(0, 128, 0, 0.5);
+    margin-left: 25px;
+    margin-top: 42px;
+}
+
+.main-body {
+    width: 45%;
+    height: 32vh;
+    display: flex;
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    border-radius: 8px;
+    box-shadow: 3px 3px 4px 2px lightgray, -3px -3px 4px 2px lightgray;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+}
+
+.heading-body {
+    font-size: 1.5rem;
+}
+
+.button-cta {
+    width: 45%;
+    height: 40px;
+    font-size: 1.1rem;
+    margin: auto;
+    background: linear-gradient(135deg, rgb(123, 104, 238), rgb(128, 0, 128));
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 3px 3px 4px lightgray, -3px -3px 4px lightgray;
+    outline: none;
+}
+
+.content {
+    text-align: center;
+}
+
+.body-footer {
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid lightgray;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 880px) {
+    /* .heading-error {
+        font-size: 2.5rem;
+    }
+    .fas {
+        font-size: 2.5rem;
+        margin-top: 35px;
+    } */
+    .main-body {
+        width: 52%;
+        height: 32vh;
+    }
+    .heading-body {
+        font-size: 1.45rem;
+    }
+    .button-cta {
+        font-size: 1.05rem;
+        height: 38px;
+    }
+    .body-footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .heading-error {
+        font-size: 2.7rem;
+    }
+    .fas {
+        font-size: 2.7rem;
+        margin-top: 35px;
+    }
+    .main-body {
+        width: 54%;
+        height: 32vh;
+    }
+    .heading-body {
+        font-size: 1.43rem;
+    }
+    .button-cta {
+        font-size: 1.04rem;
+        height: 37px;
+    }
+    .body-footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .heading-error {
+        font-size: 2.7rem;
+    }
+    .fas {
+        font-size: 2.7rem;
+        margin-top: 35px;
+    }
+    .main-body {
+        width: 57%;
+    }
+    .heading-body {
+        font-size: 1.41rem;
+    }
+    .button-cta {
+        font-size: 1.01rem;
+        height: 35px;
+    }
+    .body-footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .heading-error {
+        font-size: 2.4rem;
+    }
+    .fas {
+        font-size: 2.4rem;
+        margin-top: 32px;
+    }
+    .main-body {
+        width: 58%;
+        height: 30vh;
+    }
+    .heading-body {
+        font-size: 1.36rem;
+    }
+    .button-cta {
+        font-size: 1rem;
+        height: 32px;
+    }
+    .body-footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .heading-error {
+        font-size: 2.3rem;
+    }
+    .fas {
+        font-size: 2.3rem;
+        margin-top: 31px;
+    }
+    .main-body {
+        width: 58%;
+        height: 28vh;
+    }
+    .heading-body {
+        font-size: 1.2rem;
+    }
+    .button-cta {
+        font-size: 0.9rem;
+        height: 30px;
+    }
+    .body-footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading-error {
+        font-size: 2.2rem;
+    }
+    .fas {
+        font-size: 2.2rem;
+        margin-top: 28px;
+    }
+    .main-body {
+        width: 58%;
+        height: 26vh;
+    }
+    .heading-body {
+        font-size: 1.1rem;
+    }
+    .button-cta {
+        font-size: 0.8rem;
+        height: 28px;
+    }
+    .body-footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .main-body {
+        width: 58%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .main-body {
+        width: 58%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .heading-error {
+        font-size: 2rem;
+    }
+    .fas {
+        font-size: 2rem;
+        margin-top: 25px;
+    }
+    .main-body {
+        width: 60%;
+        height: 25vh;
+    }
+    .heading-body {
+        font-size: 1rem;
+    }
+    .button-cta {
+        font-size: 0.78rem;
+        height: 26px;
+    }
+    .body-footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .heading-error {
+        font-size: 1.8rem;
+    }
+    .fas {
+        font-size: 1.8rem;
+        margin-top: 25px;
+    }
+    .main-body {
+        width: 60%;
+        height: 23vh;
+    }
+    .heading-body {
+        font-size: 1rem;
+    }
+    .button-cta {
+        font-size: 0.78rem;
+        height: 25px;
+    }
+    .body-footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .main-body {
+        width: 62%;
+        height: 23vh;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .heading-error {
+        font-size: 1.5rem;
+    }
+    .fas {
+        font-size: 1.5rem;
+        margin-top: 21px;
+    }
+    .main-body {
+        width: 64%;
+        height: 22vh;
+    }
+    .heading-body {
+        font-size: 0.8rem;
+    }
+    .button-cta {
+        font-size: 0.7rem;
+        height: 24px;
+    }
+    .body-footer {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .main-body {
+        width: 70%;
+        height: 22vh;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .main-body {
+        width: 85%;
+        height: 22vh;
+    }
+}
