@@ -61,7 +61,7 @@ passport.use(new GoogleStrategy({
     clientSecret: process.env.CLIENT_SECRET,
     callbackURL: "https://localhost:3000/auth/google/yes",
     userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo",
-    proxy:false
+    proxy:true
 
   },
   function(accessToken, refreshToken, profile, cb) {
