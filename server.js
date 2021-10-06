@@ -201,7 +201,7 @@ const chatboatSchema=new mongoose.Schema({
   message_user:String
 })
 const Chat=mongoose.model("chatboats",chatboatSchema)
-app.post("/chatbot",function(req,res){
+app.post("/chatboat",function(req,res){
   const e=req.body.un
   const f=req.body.mail
   const g=req.body.msg
