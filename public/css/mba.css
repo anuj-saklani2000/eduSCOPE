@@ -326,6 +326,11 @@ main .qb table button{
   outline: none;
   padding: 0.3rem 0.65rem;
 }
+main .qb table button a{
+  text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
 main .qb table button:hover{
   background: red;
 }
