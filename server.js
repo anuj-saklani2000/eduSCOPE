@@ -327,7 +327,7 @@ const ELE=mongoose.model("ele",eleSchema);
 app.get("/ele",function(req,res){
   ELE.find(function(err,out2){
     if(!err){
-      if(out1.length===0){
+      if(out2.length===0){
         ELE.insertMany(array2,function(err){
           if(!err){
             console.log("ele branch data inserted successfully!")
