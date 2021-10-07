@@ -227,6 +227,47 @@ app.get("/logout",function(req,res){
 app.get("/success",function(req,res){
   res.render("success")
 })
+
+
+app.get("/cse",function(req,res){
+  res.render("cse")
+})
+app.get("/ece",function(req,res){
+  res.render("ece")
+})
+app.get("/ele",function(req,res){
+  res.render("ele")
+})
+app.get("/it",function(req,res){
+  res.render("it")
+})
+app.get("/bca",function(req,res){
+  res.render("bca")
+})
+app.get("/bba",function(req,res){
+  res.render("bba")
+})
+app.get("/me",function(req,res){
+  res.render("me")
+})
+app.get("/mba",function(req,res){
+  res.render("mba")
+})
+app.get("/mca",function(req,res){
+  res.render("mca")
+})
+
+
+
+
+
+
+
+
+app.get("/qb",function(req,res){
+  res.render("questionbank")
+})
+
 app.listen(port,function(){
   console.log(`Server is running at ${port} port`)
 })
