@@ -387,11 +387,11 @@ app.get("/it",function(req,res){
 })
 
 const array8=[
-{id: 1, stream: "BCA", sem: "BCA_1st_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1LKg290QKw0mYlKwjzOImluTD_VQpavRQ"},
-{id: 2, stream: "BCA", sem: "BCA_2nd_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1jgSokgx9Rjux2hxdGqpCrS18XyW7jV8d"},
-{id: 3, stream: "BCA", sem: "BCA_3rd_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1ns-uaaqS8DhpDwqxZ47rpW9HT7ZJDrhi"},
-{id: 4, stream: "BCA", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1tYyuevzuahNt88VmiUbg83eDOEbSdNeq"},
-{id: 5, stream: "BCA", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1j9lbUjD7pAzLlfQtanAkC3Od4goc6sW3"},
+{id: 1, stream: "BCA", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1LKg290QKw0mYlKwjzOImluTD_VQpavRQ"},
+{id: 2, stream: "BCA", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1jgSokgx9Rjux2hxdGqpCrS18XyW7jV8d"},
+{id: 3, stream: "BCA", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=1ns-uaaqS8DhpDwqxZ47rpW9HT7ZJDrhi"},
+{id: 4, stream: "BCA", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1tYyuevzuahNt88VmiUbg83eDOEbSdNeq"},
+{id: 5, stream: "BCA", sem: "semester 5", anchor: "https://drive.google.com/uc?export=download&id=1j9lbUjD7pAzLlfQtanAkC3Od4goc6sW3"},
 {id: 6, stream: "BCA", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=1-BBD1h2E3OIoKpjSXPK7Qn4FouinJE7Y"},
 ];
 const bcaSchema=new mongoose.Schema({
@@ -549,10 +549,10 @@ app.get("/mba",function(req,res){
 
 
 const array9=[
-{id: 1, stream: "MCA", sem: "MCA_2nd_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1NFQFm2CrEZwyZuI5EWOpbmrouW3Y5BIB"},
-{id: 2, stream: "MCA", sem: "MCA_3rd_&_4th_Sem_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1ZvcWzreaR-_e-skMC9nDewSD4x3whd50"},
-{id: 3, stream: "MCA", sem: "MCA_5th_&_6th_Sem_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1oDj6fSGz8pw-agvvUlpMVlJVUKVg2WsS"},
-{id: 4, stream: "MCA", sem: "SHB_MCA_5th", anchor: "https://drive.google.com/uc?export=download&id=1hfixiipnBYA-Xh8vQ2nWXn57L4DaW6Lc"},
+{id: 1, stream: "MCA", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1NFQFm2CrEZwyZuI5EWOpbmrouW3Y5BIB"},
+{id: 2, stream: "MCA", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1ZvcWzreaR-_e-skMC9nDewSD4x3whd50"},
+{id: 3, stream: "MCA", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=1oDj6fSGz8pw-agvvUlpMVlJVUKVg2WsS"},
+{id: 4, stream: "MCA", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1hfixiipnBYA-Xh8vQ2nWXn57L4DaW6Lc"},
 ]
 const mcaSchema=new mongoose.Schema({
   id:Number,
