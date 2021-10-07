@@ -229,14 +229,14 @@ app.get("/success",function(req,res){
 })
 
 const array1=[
-{id: 1, stream: "CSE", sem: "semester 1", anchor: "drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
-{id: 2, stream: "CSE", sem: "semester 2", anchor: "drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
-{id: 3, stream: "CSE", sem: "semester 3", anchor: "drive.google.com/uc?export=download&id=1v2UuZk2Bvbx_IzMOMQBbgW3NsMMc1jzQ"},
-{id: 4, stream: "CSE", sem: "semester 4", anchor: "drive.google.com/uc?export=download&id=1w48z5P8pTKviwtwWaJsiECw-cLry2NMA"},
-{id: 5, stream: "CSE", sem: "semester 5", anchor: "drive.google.com/uc?export=download&id=1vbCYUi0qJty3FXej6XleQpdpaEIG9Ohw"},
-{id: 6, stream: "CSE", sem: "semester 6", anchor: "drive.google.com/uc?export=download&id=1poTVR-YJsvIaNKRdx_Bj2WbmtyCrIXFs"},
-{id: 7, stream: "CSE", sem: "semester 7", anchor: "drive.google.com/uc?export=download&id=1tP9ODEiAqBq5GXS-fPi-5NeWClNwhd2u"},
-{id: 8, stream: "CSE", sem: "semester 8", anchor: "drive.google.com/uc?export=download&id=1cArq3jZl5WUUXge6FFTiCIOab-RziBtn"}
+{id: 1, stream: "CSE", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+{id: 2, stream: "CSE", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+{id: 3, stream: "CSE", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=1v2UuZk2Bvbx_IzMOMQBbgW3NsMMc1jzQ"},
+{id: 4, stream: "CSE", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1w48z5P8pTKviwtwWaJsiECw-cLry2NMA"},
+{id: 5, stream: "CSE", sem: "semester 5", anchor: "https://drive.google.com/uc?export=download&id=1vbCYUi0qJty3FXej6XleQpdpaEIG9Ohw"},
+{id: 6, stream: "CSE", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=1poTVR-YJsvIaNKRdx_Bj2WbmtyCrIXFs"},
+{id: 7, stream: "CSE", sem: "semester 7", anchor: "https://drive.google.com/uc?export=download&id=1tP9ODEiAqBq5GXS-fPi-5NeWClNwhd2u"},
+{id: 8, stream: "CSE", sem: "semester 8", anchor: "https://drive.google.com/uc?export=download&id=1cArq3jZl5WUUXge6FFTiCIOab-RziBtn"}
 ];
 const cseSchema=new mongoose.Schema({
   id:Number,
