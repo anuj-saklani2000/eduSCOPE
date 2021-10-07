@@ -228,9 +228,42 @@ app.get("/success",function(req,res){
   res.render("success")
 })
 
-
+const array1=[
+{id: 1, stream: "CSE", sem: "semester 1", anchor: "drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+{id: 2, stream: "CSE", sem: "semester 2", anchor: "drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+{id: 3, stream: "CSE", sem: "semester 3", anchor: "drive.google.com/uc?export=download&id=1v2UuZk2Bvbx_IzMOMQBbgW3NsMMc1jzQ"},
+{id: 4, stream: "CSE", sem: "semester 4", anchor: "drive.google.com/uc?export=download&id=1w48z5P8pTKviwtwWaJsiECw-cLry2NMA"},
+{id: 5, stream: "CSE", sem: "semester 5", anchor: "drive.google.com/uc?export=download&id=1vbCYUi0qJty3FXej6XleQpdpaEIG9Ohw"},
+{id: 6, stream: "CSE", sem: "semester 6", anchor: "drive.google.com/uc?export=download&id=1poTVR-YJsvIaNKRdx_Bj2WbmtyCrIXFs"},
+{id: 7, stream: "CSE", sem: "semester 7", anchor: "drive.google.com/uc?export=download&id=1tP9ODEiAqBq5GXS-fPi-5NeWClNwhd2u"},
+{id: 8, stream: "CSE", sem: "semester 8", anchor: "drive.google.com/uc?export=download&id=1cArq3jZl5WUUXge6FFTiCIOab-RziBtn"}
+];
+const cseSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const CSE=mongoose.model("cse",cseSchema);
 app.get("/cse",function(req,res){
-  res.render("cse")
+  CSE.find(function(err,out1){
+    if(!err){
+      if(out1.length===0){
+        CSE.insertMany(array1,function(err){
+          if(!err){
+            console.log("cse branch data inserted successfully!")
+            res.redirect("/cse")
+          }
+        })
+      }
+    }
+  })
+  else{
+  res.render("cse",{
+    List:out1
+  })
+  }
+
 })
 app.get("/ece",function(req,res){
   res.render("ece")
