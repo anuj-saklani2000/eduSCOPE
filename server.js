@@ -36,7 +36,10 @@ app.get("/register",function(req,res){
 const userSchema=new mongoose.Schema({
   username:String,
   password:String,
-  googleId:String
+  googleId:String,
+  facebookId:String,
+  name:String,
+  review:String
 })
 
 userSchema.plugin(passportLocalMongoose);
@@ -593,6 +596,33 @@ app.get("/qb",function(req,res){
   res.render("questionbank")
 })
 
+app.get("/review",function(req,res){
+  User.find({"review":{$ne:null}},function(err,outcome){
+    if(err){
+      res.redirect("/submission")
+    }
+    else{
+      res.render("review",{
+        List:outcome
+      })
+    }
+  })
+
+})
+app.get("/submission",function(req,res){
+  res.render("submission")
+})
+app.post("/submission",function(req,res){
+  const u_i=req.body.name;
+  const m_i=req.body.txt;
+  User.find(function(err,outputs){
+    outputs.name=u_i
+    outputs.review=m_i
+    outputs.save()
+    res.redirect("/review")
+  })
+
+})
 app.listen(port,function(){
   console.log(`Server is running at ${port} port`)
 })
