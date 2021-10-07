@@ -66,14 +66,11 @@
     <th>Course<i class="fas fa-exchange-alt"></i></th>
     <th>Semester<i class="fas fa-exchange-alt"></i></th>
     <th class="klam">Action <i class="fas fa-exchange-alt"></i></th>
-
-
-
   </tr>
   <% List.forEach(function(list){%>
     <tr>
-      <td><%=list.id%></td></td>
-      <td><%=list.stream%></td>
+      <td><%=list.id%></td>
+    <td><%=list.stream%></td>
       <td><%=list.sem%></td>
       <td class="but-holder">
       <button class="but-a buts"><a href="<%=list.anchor%>"></a>Download</button>
