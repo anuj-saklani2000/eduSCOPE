@@ -615,11 +615,13 @@ app.get("/submission",function(req,res){
 app.post("/submission",function(req,res){
   const u_i=req.body.name;
   const m_i=req.body.txt;
-  User.find(function(err,outputs){
-    outputs.name=u_i
-    outputs.review=m_i
-    outputs.save()
-    res.redirect("/review")
+  User.findById(req.user.id,function(err,outputt){
+    if(!err){
+      outputt.name=u_i
+      outputt.review=m_i
+      outputt.save()
+      res.redirect("/review")
+    }
   })
 
 })
