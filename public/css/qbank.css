@@ -34,6 +34,16 @@ body{
   min-height: 100vh;
   background: var(--col3);
 }
+#loader{
+  background: white url("images/loader1.gif") no-repeat center center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+}
+
 header{
   width: 100%;
 }

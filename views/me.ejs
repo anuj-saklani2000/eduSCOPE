@@ -14,6 +14,7 @@
 </head>
 
 <body>
+   <div id="loader"></div>
    <header>
       <nav data-spy="affix" data-offset-top="197">
         <div class="logo">
@@ -201,7 +202,9 @@ else{
   show=true;
 }
      })
-
+     setTimeout(function(){
+         $("#loader").css("display","none");
+     },1000)
 </script>
 </body>
 </html>
