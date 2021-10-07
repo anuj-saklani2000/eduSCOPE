@@ -205,12 +205,12 @@ const chat=new Chat({
   mail_id:f,
   message_user:g
 })
-chat.save(function(err,e){
+chat.save(function(err){
   if(err){
     res.redirect("/error")
   }
   else{
-    e.preventDefault()
+res.redirect("/")
   }
 });
 })
