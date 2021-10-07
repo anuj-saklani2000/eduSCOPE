@@ -267,29 +267,319 @@ app.get("/cse",function(req,res){
 
 
 })
+
+
+const array4=[
+{id: 1, stream: "ECE", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+{id: 2, stream: "ECE", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+{id: 3, stream: "ECE", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=114NN-11REPcT0otNdcOparsyKctwy0cL"},
+{id: 4, stream: "ECE", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1pOBnX2CxL1Bx6DymGwbtmEMHJ0HPmeCv"},
+{id: 5, stream: "ECE", sem: "semester 5", anchor: "https://drive.google.com/uc?export=download&id=1Af10NqGtsf3TlFN8zNK1r673PL-0R39C"},
+{id: 6, stream: "ECE", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=1Af10NqGtsf3TlFN8zNK1r673PL-0R39C"},
+{id: 7, stream: "ECE", sem: "semester 7", anchor: "https://drive.google.com/uc?export=download&id=1OFAjDI8_NQWl_TYfscxEuhmeFOh3VfTo"},
+{id: 8, stream: "ECE", sem: "semester 8", anchor: "https://drive.google.com/uc?export=download&id=1NnXUZ9Z-76poVCuyvLxDpNGlsVL3nBHd"}
+];
+const eceSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const ECE=mongoose.model("ece",eceSchema);
 app.get("/ece",function(req,res){
-  res.render("ece")
+  ECE.find(function(err,out3){
+    if(!err){
+      if(out3.length===0){
+        ECE.insertMany(array4,function(err){
+          if(!err){
+            console.log("ece branch data inserted successfully!")
+            res.redirect("/ece")
+          }
+        })
+      }
+      else{
+      res.render("ece",{
+        List:out3
+      })
+      }
+    }
+
+  })
 })
+
+const array2=[
+  {id: 1, stream: "ELE", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+  {id: 2, stream: "ELE", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+  {id: 3, stream: "ELE", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=1VSVrsWL4YyRjWemFOgDKh6EZ2dIcRGMT"},
+  {id: 4, stream: "ELE", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1HeqHHfU7GIH7o1eaNXTdHOz2AeWOTy_Z"},
+  {id: 5, stream: "ELE", sem: "semester 5", anchor: "https://drive.google.com/uc?export=download&id=1J23U3GfZOxIKR5MEQZYUDnmtlah1OUf3"},
+  {id: 6, stream: "ELE", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=1J23U3GfZOxIKR5MEQZYUDnmtlah1OUf3"},
+  {id: 7, stream: "ELE", sem: "semester 7", anchor: "https://drive.google.com/uc?export=download&id=1oDvJI8pEnzB3hStrEaulUHXt2E0delPz"},
+  {id: 8, stream: "ELE", sem: "semester 8", anchor: "https://drive.google.com/uc?export=download&id=1tH8X6jp4TYDzzAeXz8ZomO7jNWGhO6us"}
+];
+const eleSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const ELE=mongoose.model("ele",eleSchema);
 app.get("/ele",function(req,res){
-  res.render("ele")
+  ELE.find(function(err,out2){
+    if(!err){
+      if(out1.length===0){
+        ELE.insertMany(array2,function(err){
+          if(!err){
+            console.log("ele branch data inserted successfully!")
+            res.redirect("/ele")
+          }
+        })
+      }
+      else{
+      res.render("ele",{
+        List:out2
+      })
+      }
+    }
+
+  })
 })
+
+
+
+const array5=[
+  {id: 1, stream: "IT", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+  {id: 2, stream: "IT", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+  {id: 3, stream: "IT", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=15zk_hzWb4bBa55o2-OSggaBba1iYH_rj"},
+  {id: 4, stream: "IT", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1Fe2_m4Qn6n8DDY3jUhZ1JxjuajJDgvkn"},
+  {id: 5, stream: "IT", sem: "semester 5", anchor: "https://drive.google.com/uc?export=download&id=1I5CsSFH4-zKSd1HI1biBFtUfoHx7zpnW"},
+  {id: 6, stream: "IT", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=18nuJUjKWyBKIRQ_Dz5Qdlyxl30d9lFFM"},
+  {id: 7, stream: "IT", sem: "semester 7", anchor: "https://drive.google.com/uc?export=download&id=1y9kw4VYyNbTOdLCWL2hxMz2odDPKb3Uv"},
+  {id: 8, stream: "IT", sem: "semester 8", anchor: "https://drive.google.com/uc?export=download&id=1y9kw4VYyNbTOdLCWL2hxMz2odDPKb3Uv"}
+];
+const itSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const IT=mongoose.model("it",itSchema);
+
 app.get("/it",function(req,res){
-  res.render("it")
+  IT.find(function(err,out4){
+    if(!err){
+      if(out4.length===0){
+        IT.insertMany(array5,function(err){
+          if(!err){
+            console.log("it branch data inserted successfully!")
+            res.redirect("/it")
+          }
+        })
+      }
+      else{
+      res.render("it",{
+        List:out4
+      })
+      }
+    }
+
+  })
 })
+
+const array8=[
+{id: 1, stream: "BCA", sem: "BCA_1st_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1LKg290QKw0mYlKwjzOImluTD_VQpavRQ"},
+{id: 2, stream: "BCA", sem: "BCA_2nd_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1jgSokgx9Rjux2hxdGqpCrS18XyW7jV8d"},
+{id: 3, stream: "BCA", sem: "BCA_3rd_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1ns-uaaqS8DhpDwqxZ47rpW9HT7ZJDrhi"},
+{id: 4, stream: "BCA", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1tYyuevzuahNt88VmiUbg83eDOEbSdNeq"},
+{id: 5, stream: "BCA", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1j9lbUjD7pAzLlfQtanAkC3Od4goc6sW3"},
+{id: 6, stream: "BCA", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=1-BBD1h2E3OIoKpjSXPK7Qn4FouinJE7Y"},
+];
+const bcaSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const BCA=mongoose.model("bca",bcaSchema);
+
+
 app.get("/bca",function(req,res){
-  res.render("bca")
+  BCA.find(function(err,out7){
+    if(!err){
+      if(out7.length===0){
+        BCA.insertMany(array8,function(err){
+          if(!err){
+            console.log("bca branch data inserted successfully!")
+            res.redirect("/bca")
+          }
+        })
+      }
+      else{
+      res.render("bca",{
+        List:out7
+      })
+      }
+    }
+
+  })
 })
+
+
+const array7=[
+{id: 1, stream: "BBA", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1CPa8arhJIdxoB-dK5US5EfA_imYk3e1B"},
+{id: 2, stream: "BBA", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1SgnTwcTQUssLoCdHMi2DSw7_bOLBRq5U"},
+{id: 3, stream: "BBA", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=1wD0iCZAe2djzE7wjnSf3mYGcJEemsztu"},
+{id: 4, stream: "BBA", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1rOAW9RGT3fP_gw0XNPRNr_FMZy7LwiOE"},
+{id: 5, stream: "BBA", sem: "semester 5", anchor: "https://drive.google.com/uc?export=download&id=1NXdAklMeb-RrhCS9Nh6MAbB_Y3SXDpQh"},
+{id: 6, stream: "BBA", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=1M82fqfbi46YAgfcuyHkPqC9Mnl5WIdpl"},
+];
+const bbaSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const BBA=mongoose.model("bba",bbaSchema);
 app.get("/bba",function(req,res){
-  res.render("bba")
+  BBA.find(function(err,out6){
+    if(!err){
+      if(out6.length===0){
+        BBA.insertMany(array7,function(err){
+          if(!err){
+            console.log("bba branch data inserted successfully!")
+            res.redirect("/bba")
+          }
+        })
+      }
+      else{
+      res.render("bba",{
+        List:out6
+      })
+      }
+    }
+
+  })
 })
+
+
+
+
+
+
+
+
+
+const array3=[
+  {id: 1, stream: "ME", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+  {id: 2, stream: "ME", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1x2TN5lh4at73ijg6zY5aHM76FfaAlS7y"},
+  {id: 3, stream: "ME", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=19sAxUh6QY68C60IOHL6mAQS1Uvg53CWB"},
+  {id: 4, stream: "ME", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1GUsIH_qdXxrHDEJ70xSVAsGXxSme1TDQ"},
+  {id: 5, stream: "ME", sem: "semester 5", anchor: "https://drive.google.com/uc?export=download&id=1ZW9txqiwG0AfESXMGjXpawTTE_wh-w1U"},
+  {id: 6, stream: "ME", sem: "semester 6", anchor: "https://drive.google.com/uc?export=download&id=1ZW9txqiwG0AfESXMGjXpawTTE_wh-w1U"},
+  {id: 7, stream: "ME", sem: "semester 7", anchor: "https://drive.google.com/uc?export=download&id=1qzeDIIF1JmBFBiI3DUcU053aLrCFCMF9"},
+  {id: 8, stream: "ME", sem: "semester 8", anchor: "https://drive.google.com/uc?export=download&id=1E-8a3PHM2sXoQnrQYC4nk7xXptVMLd8I"},
+
+];
+
+const meSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const ME=mongoose.model("me",meSchema);
+
+
 app.get("/me",function(req,res){
-  res.render("me")
+  ME.find(function(err,out3){
+    if(!err){
+      if(out3.length===0){
+        ME.insertMany(array3,function(err){
+          if(!err){
+            console.log("me branch data inserted successfully!")
+            res.redirect("/me")
+          }
+        })
+      }
+      else{
+      res.render("me",{
+        List:out3
+      })
+      }
+    }
+
+  })
 })
+
+
+const array6=[
+{id: 1, stream: "MBA", sem: "semester 1", anchor: "https://drive.google.com/uc?export=download&id=1gxH_DSZ6V9PopQDgNv7nZ61ECBqoMUkT"},
+{id: 2, stream: "MBA", sem: "semester 2", anchor: "https://drive.google.com/uc?export=download&id=1zlnZ3N2CFFf-OxGWn5eUCV1LDV8-fsuR"},
+{id: 3, stream: "MBA", sem: "semester 3", anchor: "https://drive.google.com/uc?export=download&id=1X17Liksw4vo1b-BgUD0g17oaO_4T_zZ1"},
+{id: 4, stream: "MBA", sem: "semester 4", anchor: "https://drive.google.com/uc?export=download&id=1LBTZdjqMFW5igFLYNS4pySfIvVlH_Sto"},
+];
+
+const mbaSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const MBA=mongoose.model("mba",mbaSchema);
 app.get("/mba",function(req,res){
-  res.render("mba")
+  MBA.find(function(err,out5){
+    if(!err){
+      if(out5.length===0){
+        MBA.insertMany(array6,function(err){
+          if(!err){
+            console.log("mba branch data inserted successfully!")
+            res.redirect("/mba")
+          }
+        })
+      }
+      else{
+      res.render("mba",{
+        List:out5
+      })
+      }
+    }
+
+  })
 })
+
+
+const array9=[
+{id: 1, stream: "MCA", sem: "MCA_2nd_Year_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1NFQFm2CrEZwyZuI5EWOpbmrouW3Y5BIB"},
+{id: 2, stream: "MCA", sem: "MCA_3rd_&_4th_Sem_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1ZvcWzreaR-_e-skMC9nDewSD4x3whd50"},
+{id: 3, stream: "MCA", sem: "MCA_5th_&_6th_Sem_Syllabus", anchor: "https://drive.google.com/uc?export=download&id=1oDj6fSGz8pw-agvvUlpMVlJVUKVg2WsS"},
+{id: 4, stream: "MCA", sem: "SHB_MCA_5th", anchor: "https://drive.google.com/uc?export=download&id=1hfixiipnBYA-Xh8vQ2nWXn57L4DaW6Lc"},
+]
+const mcaSchema=new mongoose.Schema({
+  id:Number,
+  stream:String,
+  sem:String,
+  anchor:String
+})
+const MCA=mongoose.model("mca",mcaSchema);
 app.get("/mca",function(req,res){
-  res.render("mca")
+  MCA.find(function(err,out8){
+    if(!err){
+      if(out8.length===0){
+        MCA.insertMany(array9,function(err){
+          if(!err){
+            console.log("mca branch data inserted successfully!")
+            res.redirect("/mca")
+          }
+        })
+      }
+      else{
+      res.render("mca",{
+        List:out8
+      })
+      }
+    }
+
+  })
 })
 
 

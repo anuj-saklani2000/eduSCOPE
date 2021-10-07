@@ -67,74 +67,17 @@
     <th>Semester<i class="fas fa-exchange-alt"></i></th>
     <th class="klam">Action <i class="fas fa-exchange-alt"></i></th>
 
-
-
   </tr>
-  <tr>
-    <td>1</td>
-    <td>CSE</td>
-    <td>SEM 1</td>
-    <td class="but-holder">
-    <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>CSE</td>
-    <td>SEM 2</td>
-    <td class="but-holder">
-      <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>CSE</td>
-    <td>SEM 3</td>
-    <td class="but-holder">
-    <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>CSE</td>
-    <td>SEM 4</td>
-    <td class="but-holder">
-      <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>CSE</td>
-    <td>SEM 5</td>
-    <td class="but-holder">
-    <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>CSE</td>
-    <td>SEM 6</td>
-    <td class="but-holder">
- <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>CSE</td>
-    <td>SEM 7</td>
-    <td class="but-holder">
-       <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>CSE</td>
-    <td>SEM 8</td>
-    <td class="but-holder">
-   <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-
+  <% List.forEach(function(list){%>
+    <tr>
+      <td><%=list.id%></td>
+    <td><%=list.stream%></td>
+      <td><%=list.sem%></td>
+      <td class="but-holder">
+      <button class="but-a buts"><a href="<%=list.anchor%>" target="_blank">Download</a></button>
+      </td>
+    </tr>
+<%  })%>
 
 </table>
 </div>
