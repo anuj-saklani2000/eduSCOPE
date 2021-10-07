@@ -205,7 +205,14 @@ const chat=new Chat({
   mail_id:f,
   message_user:g
 })
-chat.save();
+chat.save(function(err,e){
+  if(err){
+    res.redirect("/error")
+  }
+  else{
+    e.preventDefault()
+  }
+});
 })
 app.get("/privacy",function(req,res){
   res.render("privacypolicy")
