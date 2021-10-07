@@ -256,12 +256,13 @@ app.get("/cse",function(req,res){
           }
         })
       }
+      else{
+      res.render("cse",{
+        List:out1
+      })
+      }
     }
-    else{
-    res.render("cse",{
-      List:out1
-    })
-    }
+
   })
 
 
