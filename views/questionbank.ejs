@@ -69,118 +69,20 @@
     <th>Semester<i class="fas fa-exchange-alt"></i></th>
     <th>Subject <i class="fas fa-exchange-alt"></i></th>
     <th class="klam">Action <i class="fas fa-exchange-alt"></i></th>
+  </tr>
 
+  <% List.forEach(function(list){%>
+    <tr>
+      <td><%=list.id%></td>
+    <td><%=list.course%></td>
+      <td><%=list.sem%></td>
+        <td><%=list.sub%></td>
+      <td class="but-holder">
+      <button class="but-a buts"><a href="<%=list.anchor%>" target="_blank">Download</a></button>
+      </td>
+    </tr>
+<%  })%>
 
-
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>CSE</td>
-    <td>SEM 1</td>
-    <td>SCP</td>
-    <td class="but-holder">
-    <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>CSE</td>
-    <td>SEM 1</td>
-    <td>PPS</td>
-    <td class="but-holder">
-      <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>CSE</td>
-    <td>SEM 1</td>
-    <td>Math</td>
-    <td class="but-holder">
-    <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>CSE</td>
-    <td>SEM 1</td>
-    <td>Bio</td>
-    <td class="but-holder">
-      <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>CSE</td>
-    <td>SEM 1</td>
-    <td>EGD</td>
-    <td class="but-holder">
-    <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>CSE</td>
-    <td>SEM 2</td>
-    <td>Math</td>
-    <td class="but-holder">
- <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>CSE</td>
-    <td>SEM 2</td>
-    <td>Chem</td>
-    <td class="but-holder">
-       <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>CSE</td>
-    <td>SEM 2</td>
-    <td>BEE</td>
-    <td class="but-holder">
-   <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>CSE</td>
-    <td>SEM 2</td>
-    <td>Eng</td>
-    <td class="but-holder">
-  <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>CSE</td>
-    <td>SEM 2</td>
-    <td>EGD</td>
-    <td class="but-holder">
-  <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-   <tr>
-    <td>11</td>
-    <td>IT</td>
-    <td>SEM 1</td>
-    <td>English</td>
-    <td class="but-holder">
-     <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
-   <tr>
-    <td>12</td>
-    <td>IT</td>
-    <td>SEM 2</td>
-    <td>EGD</td>
-    <td class="but-holder">
-      <button class="but-a buts"><a href="#"></a>Download</button>
-    </td>
-  </tr>
 
 </table>
 </div>
