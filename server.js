@@ -622,7 +622,7 @@ const arrayqb=[
 {id: 29, course: "CSE", sem: "semester 6", sub: "Parallel Computing", anchor: "https://drive.google.com/uc?export=download&id=1-k5DHXIK6Mca36v38TzU-z9kCoZ_H9vi"},
 {id: 30, course: "CSE", sem: "semester 6", sub: "Software Engineering", anchor: "https://drive.google.com/uc?export=download&id=184iR9kKmB0lpCklBXZ-4WfxsLfsa53St"},
 {id: 31, course: "CSE", sem: "semester 7", sub: "Agile Software Engineering", anchor: "https://drive.google.com/uc?export=download&id=1ZDUKoRNJZ-z0_YN4sKbrXozAx8ndMuZ8"},
-{id: 32, course: "CSE", sem: "semester 7", sub: "Big Data Analytics", anchor: "https://drive.google.com/uc?export=download&id=1R7MVgFY4bPLTlQBtH1dpZcrMnxfaFkjY"}{id: 1, course: "CSE", sem: "semester 99", sub: "test", anchor: "https://drive.google.com/uc?export=download&id=1CPa8arhJIdxoB-dK5US5EfA_imYk3e1B"},
+{id: 32, course: "CSE", sem: "semester 7", sub: "Big Data Analytics", anchor: "https://drive.google.com/uc?export=download&id=1R7MVgFY4bPLTlQBtH1dpZcrMnxfaFkjY"},
 {id: 33, course: "CSE", sem: "semester 7", sub: "Crypto", anchor: "https://drive.google.com/uc?export=download&id=1XFnXbDVJY5IZDoMgTQcCf5kq0dQ2f7g7"},
 {id: 34, course: "CSE", sem: "semester 7", sub: "Cyber security", anchor: "https://drive.google.com/uc?export=download&id=1Z5-ZTE9aHst5eVcVzNbu6Dbvzj-634w5"},
 {id: 35, course: "CSE", sem: "semester 7", sub: "Expert System", anchor: "https://drive.google.com/uc?export=download&id=1l9_s5BXyxdQTDyb_hBhSN0eO8xyl4HrN"},
@@ -1018,7 +1018,7 @@ const arrayqb=[
 {id: 425, course: "MBA", sem: "semester 4", sub: "technology forcasting", anchor: "https://drive.google.com/uc?export=download&id=19twesfSq2uZoN3LF6oQ4DzCj1SfNiYw1"},
 {id: 426, course: "MBA", sem: "semester 4", sub: "technology forcasting", anchor: "https://drive.google.com/uc?export=download&id=1F54Ro_Ahnwh16w5uyeurFbnKGH-XWwSv"},
 {id: 427, course: "MBA", sem: "semester 4", sub: "Transporation Management", anchor: "https://drive.google.com/uc?export=download&id=1J8nkQMJZjC05WPqvGdw1phrkWxQOEQfd"},
-{id: 428, course: "MBA", sem: "semester 4", sub: "Transporation Management", anchor: "https://drive.google.com/uc?export=download&id=1gajoXoW6sRz0BLPvaR4x1tHBjcfcwAq7"},
+{id: 428, course: "MBA", sem: "semester 4", sub: "Transporation Management", anchor: "https://drive.google.com/uc?export=download&id=1gajoXoW6sRz0BLPvaR4x1tHBjcfcwAq7"}
 
 ];
 const qbSchema=new mongoose.Schema({
