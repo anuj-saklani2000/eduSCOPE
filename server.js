@@ -1018,10 +1018,10 @@ const arrayqb=[
 {id: 425, course: "MBA", sem: "semester 4", sub: "technology forcasting", anchor: "https://drive.google.com/uc?export=download&id=19twesfSq2uZoN3LF6oQ4DzCj1SfNiYw1"},
 {id: 426, course: "MBA", sem: "semester 4", sub: "technology forcasting", anchor: "https://drive.google.com/uc?export=download&id=1F54Ro_Ahnwh16w5uyeurFbnKGH-XWwSv"},
 {id: 427, course: "MBA", sem: "semester 4", sub: "Transporation Management", anchor: "https://drive.google.com/uc?export=download&id=1J8nkQMJZjC05WPqvGdw1phrkWxQOEQfd"},
-{id: 428, course: "MBA", sem: "semester 4", sub: "Transporation Management", anchor: "https://drive.google.com/uc?export=download&id=1gajoXoW6sRz0BLPvaR4x1tHBjcfcwAq7"}
+{id: 428, course: "MBA", sem: "semester 4", sub: "Transporation Management", anchor: "https://drive.google.com/uc?export=download&id=1gajoXoW6sRz0BLPvaR4x1tHBjcfcwAq7"},
 
 ];
-const qbSchema= new mongoose.Schema({
+const qbSchema=new mongoose.Schema({
   id:Number,
   course:String,
   sem:String,
