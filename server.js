@@ -1,4 +1,3 @@
-require('dotenv').config()
 const express=require("express")
 const bodyParser=require("body-parser")
 const ejs=require("ejs")
@@ -16,7 +15,7 @@ const app=express();
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended:true}))
 /*mongoose.connect('mongodb://localhost:27017/eduscopeDB');*/
-mongoose.connect('mongodb+srv://anuj_saklani:anuj123@cluster0.mn7ci.mongodb.net/eduscopeDB');
+mongoose.connect('mongodb+srv://pawarnihal44:db1234@cluster0.vsww5gu.mongodb.net/?retryWrites=true&w=majority');
 /*mongoose.set('bufferCommands', false);*/
   app.set('view engine', 'ejs');
   app.use(session({
@@ -62,8 +61,8 @@ passport.deserializeUser(function(id, done) {
 
 
 passport.use(new GoogleStrategy({
-    clientID: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
+    clientID: '1074896299874-6t7ldscc496a6toto969j9mbdgt6gm8e.apps.googleusercontent.com',
+    clientSecret: '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',
     callbackURL: "https://eduscope2000.herokuapp.com/auth/google/yes",
     userProfileURL:"https://www.googleapis.com/oauth2/v3/userinfo",
     proxy:true
@@ -94,8 +93,8 @@ app.get("/auth/google/yes",
 
 
   passport.use(new FacebookStrategy({
-    clientID: process.env.APP_ID,
-    clientSecret: process.env.APP_SECRET,
+    clientID: '384905746581456',
+    clientSecret: '6d6043126baea665bb54a24b86da2dbc',
     callbackURL: "https://mighty-savannah-84244.herokuapp.com/auth/facebook/callback",
     profileFields:['id','displayName','name','email'],
     proxy:true
